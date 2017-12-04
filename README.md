@@ -24,7 +24,7 @@ roslaunch pocketsphinx pocketsphinx.launch
 If you want to be able to recognize other sentences you need to create your own .dic and .kwlist files.
 These are models which provide the system with a mapping of vocabulary words to sequences of phonemes.
 <br>  
-:gear: &nbsp; [lmtool (currently only support english)](http://www.speech.cs.cmu.edu/tools/lmtool.html)
+:gear: &nbsp; [lmtool (currently only supports english)](http://www.speech.cs.cmu.edu/tools/lmtool.html)
 
 > The lmtool builds a consistent set of lexical and language model files for decoders. The target decoders are the Sphinx family, though any system that can read ARPA-format files can use them.
   Create a corpus with the sentences you want to be able to recognize and run them through the lmtool which generates the files for you, example below.
@@ -51,7 +51,7 @@ Download the model you want and extract the files. Then replace the content in t
 ## Python
 > There are some general dependencies which the package is based on. Run the command below and you should be good to go. 
   
-  
+:book: &nbsp; (Misplaced the page somewhere, I'll add the explanation when I find it)  
 <br>
 ### Requirements
 
