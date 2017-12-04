@@ -19,7 +19,6 @@ roslaunch pocketsphinx pocketsphinx.launch
 <br>
 # Modifications
   
-<br>
 ### Create your own vocabulary files
 If you want to be able to recognize other sentences you need to create your own .dic and .kwlist files.
 These are models which provide the system with a mapping of vocabulary words to sequences of phonemes.
@@ -46,8 +45,7 @@ Download the model you want and extract the files. Then replace the content in t
 <br>  
 <br>
 # Dependencies
-<br> 
-  
+    
 ## Python
 > There are some general dependencies which the package is based on. Run the command below and you should be good to go. 
   
