@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>pepperspeech</name>
+  <version>0.0.1</version>
+  <description>
+    This package uses pocketsphinx for speach recognition,
+    made for the pepper robot.
+  </description>
+  <author>Christoffer Henriksson</author>
+  <maintainer email="chrhe230@student.liu.se">Christoffer Henriksson</maintainer>
+  <license>BSD</license>
+  <url type="website"></url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>rospy</exec_depend>>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>std_srvs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>><!-- only needed for demos -->
+
+</package>
