@@ -46,12 +46,26 @@ Download the model you want and extract the files. Then replace the content in t
 <br>
 # Dependencies
     
-## Python
+## General
 > There are some general dependencies which the package is based on. Run the command below and you should be good to go. 
   
-:book: &nbsp; (Misplaced the page somewhere, I'll add the explanation when I find it)  
+:book: &nbsp; [General dependencies and CMU Sphinx guide](http://jrmeyer.github.io/asr/2016/01/08/Installing-CMU-Sphinx-on-Ubuntu.html)
+  
 <br>
+
 ### Requirements
+
+* gcc
+* automake
+* autoconf
+* libtool
+* bison
+* swig
+* python-dev
+* libpulse-dev
+
+  
+<br>
 
 ```shell
 sudo apt-get install gcc automake autoconf libtool bison swig python-dev libpulse-dev
@@ -129,4 +143,5 @@ sudo apt-get install libgstreamer1.0-0 gstreamer1.0-plugins-base gstreamer1.0-pl
   
 <br>
 # Further reading
-1. [ROS pocketsphinx speech recognition tutorial](https://code.google.com/archive/p/ros-pocketsphinx-speech-recognition-tutorial/)
+1. [ROS pocketsphinx speech recognition tutorial](https://code.google.com/archive/p/ros-pocketsphinx-speech-recognition-tutorial/)  
+2. [ROS actionlib server/client communcation](http://wiki.ros.org/actionlib)
