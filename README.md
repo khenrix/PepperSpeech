@@ -13,7 +13,7 @@ Take a look at the dependencies section if something is not working properly.
 ### Usage
 
 ```
-roslaunch pocketsphinx pocketsphinx.launch
+roslaunch pepperspeech pepperspeech.launch
 ```
   
 <br>
