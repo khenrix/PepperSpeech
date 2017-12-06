@@ -1,12 +1,12 @@
-<s> HELLO </s>
-<s> YES </s>
-<s> NO </s>
-<s> I WOULD LIKE TO ORDER </s>
-<s> WHAT IS YOUR NAME? </s>
-<s> PEPPER </s>
-<s> COKE </s>
-<s> SPRITE </s>
-<s> TEQUILA </s>
-<s> MARGARITA </s>
-<s> BEER </s>
-<s> WINE </s>
+HELLO /1e-1/
+YES /1e-1/
+NO /1e-1/
+I WOULD LIKE TO ORDER /1e-1/
+WHAT IS YOUR NAME? /1e-1/
+PEPPER /1e-1/
+COKE /1e-1/
+SPRITE /1e-1/
+TEQUILA /1e-1/
+MARGARITA /1e-1/
+BEER /1e-1/
+WINE /1e-1/
