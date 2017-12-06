@@ -1,47 +1,35 @@
  #!/bin/bash
 
-# Created from guide
-# http://jrmeyer.github.io/installation/2016/01/08/Installing-CMU-Sphinx-on-Ubuntu.html
-
-echo "Installing Dependencies"
+echo "Installing general dependencies"
 sudo apt-get install gcc automake autoconf libtool bison swig python-dev libpulse-dev
 
-# TODO: add install for these Dependencies
-#gstreamer-1.0.pc
-#gstreamer-base-1.0.pc
-#gstreamer-plugins-base-1.0.pc
+echo "Installing GStreamer dependencies"
+sudo apt-get install libgstreamer1.0-0 gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav gstreamer1.0-doc gstreamer1.0-tools
 
-echo "Installing sphinxbase"
+echo "Installing CMU Sphinx dependencies"
 mkdir sphinx-source
 cd sphinx-source
 git clone https://github.com/cmusphinx/sphinxbase.git
 cd sphinxbase
 
-echo "Compiling and installing"
 ./autogen.sh
 make
 sudo make install
 
-echo "Adding (/usr/local/lib) to library search path"
 echo "/usr/local/lib" | sudo tee -a /etc/ld.so.conf
 sudo ldconfig
 
-echo "Check if computer is finding shared libraries"
 ldconfig -p | grep local
 
-echo "Sphinxbase installed"
 cd ..
 
-echo "Installing PocketSphinx"
 git clone https://github.com/cmusphinx/pocketsphinx.git
 cd pocketsphinx
 ./autogen.sh
 
-echo "Compiling and installing"
 make
 sudo make install
 
-echo "Updating search path (ldconfig)"
 sudo ldconfig
 
-echo "PocketSphinx installed"
+echo "All dependencies should now be installed"
