@@ -1,0 +1,12 @@
+Hello
+Yes
+No
+I would like to order
+What is your name?
+Pepper
+Coke
+Sprite
+Tequila
+Margarita
+Beer
+Wine
