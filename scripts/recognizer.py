@@ -34,7 +34,7 @@ class recognizer(object):
             self.lm = rospy.get_param(self._lm_param)
         else:
             rospy.loginfo("Loading the default acoustic model")
-            self.lm = "../language_model"
+            self.lm = "/home/sonnert/Pepper/catkin_ws/src/interaction/pepperspeech/language_model"
             rospy.loginfo("Done loading the default acoustic model")
 
         if rospy.has_param(self._dict_param):

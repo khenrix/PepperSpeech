@@ -1,0 +1,8 @@
+<launch>
+
+  <arg name="_dict" value="_dict:=$(find pepperspeech)/vocab/voice_cmd.dic" />
+  <arg name="_kws" value="_kws:=$(find pepperspeech)/vocab/voice_cmd.kwlist" />
+
+  <node name="pepper_speech_node" pkg="pepperspeech" type="recognizer.py" output="screen" args="$(arg _dict) $(arg _kws)" />
+
+</launch>
