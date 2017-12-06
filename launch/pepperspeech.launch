@@ -2,6 +2,7 @@
 
   <arg name="_dict" value="_dict:=$(find pepperspeech)/vocab/voice_cmd.dic" />
   <arg name="_kws" value="_kws:=$(find pepperspeech)/vocab/voice_cmd.kwlist" />
+  <arg name="_lm" value="_lm:)$(find pepperspeech)/language_model"
 
   <node name="pepper_speech_node" pkg="pepperspeech" type="recognizer.py" output="screen" args="$(arg _dict) $(arg _kws)" />
 
