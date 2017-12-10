@@ -146,3 +146,4 @@ sudo apt-get install libgstreamer1.0-0 gstreamer1.0-plugins-base gstreamer1.0-pl
 1. [ROS pocketsphinx speech recognition tutorial](https://code.google.com/archive/p/ros-pocketsphinx-speech-recognition-tutorial/)  
 2. [ROS actionlib server/client communcation](http://wiki.ros.org/actionlib)
 3. [Tuning speech recognition accuracy](https://cmusphinx.github.io/wiki/tutorialtuning/)
+4. [Speech Reqognition example using NAO's recognizer](https://github.com/VincentRoma/NaoqiRecognition)
