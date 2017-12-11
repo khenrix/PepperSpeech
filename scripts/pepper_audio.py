@@ -35,7 +35,7 @@ class SoundProcessingModule(object):
         app.start()
         session = app.session
 
-        rospy.init_node("pepper_speech_node")
+        rospy.init_node("test_pepper_node")
 
         # Get the service ALAudioDevice.
         self.audio_service = session.service("ALAudioDevice")
@@ -45,7 +45,9 @@ class SoundProcessingModule(object):
         self.micFront = []
         self.module_name = "SoundProcessingModule"
 
-        self.pub_ = rospy.Publisher('/interaction/status', String, queue_size=10)
+        #self.pub_ = rospy.Publisher('/interaction/status', String, queue_size=10)
+        self.pub_ = rospy.Publisher('~output', String, queue_size=1)
+        
         rospack = rospkg.RosPack()
         package_path = rospack.get_path('pepperspeech')
         self.lm = package_path + '/language_model'
@@ -115,7 +117,7 @@ class SoundProcessingModule(object):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--ip", type=str, default="127.0.0.1",
+    parser.add_argument("--ip", type=str, default="192.168.1.131",
                         help="Robot IP address. On robot or Local Naoqi: use '127.0.0.1'.")
     parser.add_argument("--port", type=int, default=9559,
                         help="Naoqi port number")
