@@ -21,21 +21,25 @@ class PepperResponse(object):
 
 	def publish_order(self, order):
 		self.pub_.publish(String(msg))
+		self.speak.publish(String("Please wait here while I get your {0}".format(msg)))
 
 	def respond(self, msg):
 		msg = msg.lower()
 
-		if msg in self.accept:
-			return True
-		if msg in self.decline:
-			return False
-
 		if msg in self.orders:
 			self.publish_order(msg)
+			return True
+
+		if msg in self.accept:
+			self.speak.publish(String("Accepted"))	
+
+		if msg in self.decline:
+			self.speak.publish(String("Declined"))
+
 		if msg in self.greetings:
 			self.speak.publish(String("Hello, what would you like to drink?"))
 
-		return True
+		return False
 
 if __name__ == "__main__":
 	print("RUNNINGS PEPPER RESPONSE SCRIPT")
