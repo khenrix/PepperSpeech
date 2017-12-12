@@ -20,7 +20,7 @@ class recognizer(object):
         self.speed = 0.2
 
         # Start node
-        rospy.init_node("test_computer_node")
+        rospy.init_node("test_speech_computer_node")
         rospy.on_shutdown(self.shutdown)
 
         self._lm_param = "~lm"

@@ -1,0 +1,5 @@
+<launch>
+
+  <node name="test_stream_audio_node" pkg="pepperspeech" type="pepper_sound.py"/>
+
+</launch>
