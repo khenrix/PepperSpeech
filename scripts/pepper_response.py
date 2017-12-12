@@ -19,8 +19,8 @@ class PepperResponse(object):
 		self.decline = ["no", "disagree", "not"]	
 
 	def publish_order(self, order):
-		self.pub_.publish(String(msg))
-		self.speak.publish(String("Please wait here while I get your {0}".format(msg)))
+		self.speak.publish(String("Please wait here while I get your {0}".format(order)))
+		self.pub_.publish(String(order))
 
 	def respond(self, msg):
 		msg = msg.lower()
@@ -36,7 +36,7 @@ class PepperResponse(object):
 			self.speak.publish(String("Declined"))
 
 		if msg in self.greetings:
-			self.speak.publish(String("Hello, what would you like to drink?"))
+			self.speak.publish(String("Hello, What would you like to drink?"))
 
 		return False
 

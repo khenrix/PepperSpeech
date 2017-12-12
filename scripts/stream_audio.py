@@ -42,7 +42,7 @@ class StreamAudio(object):
 		self.pyaudio.terminate()
 
 	def processRemote(self, nbOfChannels, nbOfSamplesByChaneel, timeStamp, inputBuffer):
-		self.stop_listening = self.recog.decode(inputBuffer)
+		self.stop_listening = self.recog.decode(str(inputBuffer))
 
 
 if __name__ == "__main__":
