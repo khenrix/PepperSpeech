@@ -145,5 +145,10 @@ sudo apt-get install libgstreamer1.0-0 gstreamer1.0-plugins-base gstreamer1.0-pl
 # Further reading
 1. [ROS pocketsphinx speech recognition tutorial](https://code.google.com/archive/p/ros-pocketsphinx-speech-recognition-tutorial/)  
 2. [ROS actionlib server/client communcation](http://wiki.ros.org/actionlib)
-3. [Tuning speech recognition accuracy](https://cmusphinx.github.io/wiki/tutorialtuning/)
-4. [Speech Reqognition example using NAO's recognizer](https://github.com/VincentRoma/NaoqiRecognition)
+3. [Tuning speech recognition accuracy (pocketsphinx)](https://cmusphinx.github.io/wiki/tutorialtuning/)
+4. [Speech recognition alternatives](https://github.com/Uberi/speech_recognition)
+5. [ALAudioDevice Documentation (pepper audio streaming)](http://doc.aldebaran.com/2-5/naoqi/audio/alaudiodevice-api.html)
+6. [ALSpeechRecognition (another alternative to pocketsphinx)](http://doc.aldebaran.com/2-1/naoqi/audio/alspeechrecognition-tuto.html)
+7. [AudioBuffer Message Documentation](http://docs.ros.org/jade/api/naoqi_bridge_msgs/html/msg/AudioBuffer.html)
+8. [Streaming audio from pepper (In japanese, but code still works)](http://www.baku-dreameater.net/archives/9331)
+9. [Nao Speech Recognition (another example)](https://github.com/VincentRoma/NaoqiRecognition)
