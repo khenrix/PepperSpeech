@@ -3,7 +3,9 @@ import sys
 import time
 
 import qi
-from pyaudio import PyAudio
+import pyaudio
+
+import speech_recognition as sr
 
 class StreamAudio(object):
 	"""
@@ -22,13 +24,15 @@ class StreamAudio(object):
 
 	@qi.nobind
 	def start(self, serviceName):
-		self.pyaudio = PyAudio()
-		self.stream = self.pyaudio.open(format=self.pyaudio.get_format_from_width(2), channels=1, rate=16000, output=True)
+		self.recog = sr.SpeechRecognizer()
+		self.pyaudio = pyaudio.PyAudio()
+		self.stream = self.pyaudio.open(format=pyaudio.paInt16, channels=1, rate=16000, output=True, frames_per_buffer=1024)
 		self.robot_audio.setClientPreferences(serviceName, 16000, 3, 0)
 		self.robot_audio.subscribe(serviceName)
+		self.stop_listening = False
 
 		try:
-			while True:
+			while not self.stop_listening:
 				time.sleep(1)
 		except KeyboardInterrupt:
 			pass
@@ -38,7 +42,8 @@ class StreamAudio(object):
 		self.pyaudio.terminate()
 
 	def processRemote(self, nbOfChannels, nbOfSamplesByChaneel, timeStamp, inputBuffer):
-		self.stream.write(str(inputBuffer))
+		self.stop_listening = self.recog.decode(inputBuffer)
+
 
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()

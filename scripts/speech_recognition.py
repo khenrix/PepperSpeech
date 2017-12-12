@@ -9,6 +9,8 @@ import pyaudio
 import os
 import commands
 
+import pepper_response as pr
+
 class SpeechRecognizer(object):
 
 	def __init__(self):
@@ -36,6 +38,8 @@ class SpeechRecognizer(object):
         self.decoder.start_utt()
         rospy.loginfo("Done starting the decoder")
 
+        self.response = pr.PepperResponse()
+
     def decode(self, buffer, output=False):
     	self.decoder.process_raw(buf, False, False)
 
@@ -45,9 +49,11 @@ class SpeechRecognizer(object):
 	    	if output:
 	    		print(recognized_segments)
 
+            isOrder = self.response.respond(recognized_segments[0])
+
 	    	self.decoder.end_utt()
             self.decoder.start_utt()
-            return True
+            return isOrder
         else:
         	return False
 

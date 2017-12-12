@@ -6,7 +6,6 @@ from std_srvs.srv import *
 import os
 import commands
 
-
 class PepperResponse(object):
 
 	def __init__(self):
