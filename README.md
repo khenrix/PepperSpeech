@@ -15,7 +15,36 @@ Take a look at the dependencies section if something is not working properly.
 ```
 roslaunch pepperspeech pepperspeech.launch
 ```
-  
+OR
+```
+python stream_audio.py --ip YOUR PEPPER IP ADRESS --port YOUR PEPPER PORT
+```
+
+### Tests
+<b>Test-Computer:</b> Stream audio from computer using pyaudio and use pocketsphinx to recognize sentences.
+
+```
+roslaunch test_speech_computer.launch
+```
+<b>Test-Pepper:</b> Stream audio from pepper and play it on computer using pyaudio.
+
+If your pepper IP is "192.168.1.131" and you are connected to pepper this should work.
+```
+roslaunch test_stream_audio.launch
+```
+Or run the script with python
+```
+python scripts/test-scripts/pepper_sound.py 
+```
+If you have a different pepper IP or port, do this.
+```
+python scripts/test-scripts/pepper_sound.py  --ip xxx.xxx.xx.xx --port xxxx
+```
+```
+# In pepper_sound.py change the default to your pepper IP.
+parser.add_argument("--ip", type=str, default="192.168.1.131", help="PEPPERS IP ADRESS, just ask pepper")
+```
+
 <br>
 # Modifications
   
