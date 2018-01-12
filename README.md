@@ -20,13 +20,15 @@ OR
 python stream_audio.py --ip YOUR PEPPER IP ADRESS --port YOUR PEPPER PORT
 ```
 
-### Tests
-<b>Test-Computer:</b> Stream audio from computer using pyaudio and use pocketsphinx to recognize sentences.
+# Tests
+### Test-Computer
+Stream audio from computer using pyaudio and use pocketsphinx to recognize sentences.
 
 ```
 roslaunch test_speech_computer.launch
 ```
-<b>Test-Pepper:</b> Stream audio from pepper and play it on computer using pyaudio.
+### Test-Pepper
+Stream audio from pepper and play it on computer using pyaudio.
 
 If your pepper IP is "192.168.1.131" and you are connected to pepper this should work.
 ```
