@@ -5,7 +5,7 @@ It would therefore be wise to take a look
 at that repository in case of any big updates, it probably will be more up to date.  
 <br>
 ### Installation
-Take a look at the dependencies section in the wiki if something is not working properly.
+Take a look at the [dependencies section in the wiki](https://gitlab.ida.liu.se/TDDE19athome/pepperspeech/wikis/dependencies) if something is not working properly.
 ```
 ./install_dep.sh
 ```
