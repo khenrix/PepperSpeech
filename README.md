@@ -1,7 +1,7 @@
 # PepperSpeech :robot: :speech_balloon:
 PepperSpeech is a simple base for speech recognition for the pepper robot. 
 The ROS package mainly consists of three parts (python scripts) and is ment to be used as a quick start/guide for people wanting to implement speech recognition functionality in their own projects. 
-Please take a look at the wiki for further details on troubleshooting/modifications/further reading etc.  
+Please take a look at the wiki for further details on troubleshooting/modifications etc. 
 <br>  
   
 ### :grey_question: &nbsp; Current functionality
