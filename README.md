@@ -10,7 +10,7 @@ To begin with pepper streams audio and then tries to recognize what people are s
 If pepper recognizes a order the process stops and we publish the order to a ROS node called "pepper_speech_node" and peppers says something witty.  
   
 ### :file_folder: &nbsp; FILES
-<b>stream_audio.py</b> - establishes a link between peppers and the computer, then reads audio (1024 bytes).  
+<b>stream_audio.py</b> - establishes a link between pepper and the computer, then reads audio (1024 bytes).  
 <b>speech_recogntion.py</b> - takes audio and matches it to predefined sentences in the corpus using pocketsphinx.  
 <b>pepper_response</b> - decides what to do depending on what sentence is recognized.  
   
