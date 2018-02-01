@@ -2,13 +2,24 @@
 PepperSpeech is a simple base for speech recognition for the pepper robot. 
 The ROS package mainly consists of three parts (python scripts) and is ment to be used as a quick start guide for people wanting to implement speech recognition functionality in their own projects. 
 Please take a look at the wiki for further details on installation/troubleshooting/modifications etc.   
-<br>
+
+# FILES
 <b>stream_audio.py</b> - establishes a link between peppers and the computer, then reads audio (1024 bytes).  
 <b>speech_recogntion.py</b> - takes audio and matches it to predefined sentences in the corpus using pocketsphinx.  
 <b>pepper_response</b> - decides what to do depending on what sentence is recognized.  
 <br>
-Getting everything to work together might be quite tricky and if something is not working I would recommend taking a look at the dependencies section in the wiki where I tried to gather some guides and useful pages for troubleshooting purposes.   
+
+# Current functionality
+Basically we are simulating a scenario where pepper is gathering drink orders from customers. 
+To begin with pepper streams audio and then tries to recognize what people are saying, we have some basic things which can be recognized (like beer, wine, coke, yes, no).
+If pepper recognizes a order the process stops and we publish the order to a ROS node called "pepper_speech_node" and peppers says something witty.
+  
+<br>  
+Getting everything to work together might be quite tricky and if something is not working I would recommend taking a look at the dependencies section in the wiki.
+I tried to gather some guides and useful pages for troubleshooting purposes, please take note that everything is setup on Linux Ubuntu 16.04.
+I also assume that you have general knowledge of ROS and are connected to peppers network. 
 <br>
+
 I recommend to get the tests working first and then continue working with the base. See the tests section of the wiki.
 
 I wish you happy coding and good luck with your projects!  
