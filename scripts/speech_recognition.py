@@ -12,7 +12,6 @@ import imp
 class SpeechRecognizer(object):
 
 	def __init__(self):
-		print("TEST!!!")
 		rospy.loginfo("Loading language model and vocabulary files")
 		rospack = rospkg.RosPack()
 		package_path = rospack.get_path('pepperspeech')
