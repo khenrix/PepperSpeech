@@ -14,8 +14,8 @@ class StreamAudio(object):
 	"""
 	Stream audio from pepper with pyaudio and naoqi.
 
-	TO RUN: python pepper_sound.py --ip [YOUR PEPEPR IP] --port [YOUR PEPPER PORT]
-	EX: python pepper_sound.py --ip 192.168.xx.xx --port 9559
+	TO RUN: python stream_audio.py --ip [YOUR PEPEPR IP] --port [YOUR PEPPER PORT]
+	EX: python stream_audio.py --ip 192.168.xx.xx --port 9559
 	"""
 
 	def __init__(self, app):
