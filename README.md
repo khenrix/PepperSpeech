@@ -56,7 +56,7 @@ python stream_audio.py --ip YOUR PEPPER IP ADRESS --port YOUR PEPPER PORT
       app = qi.Session()
       app.connect(connection_url)
     except RuntimeError:
-      print "Can't connect to Naoqi at ip \" {0} \" on port {1}. \nPlease check your script arguments. Run with -h option for help.".format(args.ip, args.port)
+      print "Can't connect to Naoqi at ip \" {0} \" on port {1}. \nPlease check your script arguments.".format(pepper_ip, pepper_port)
       sys.exit(1)
     
     player = speech.StreamAudio(app)
