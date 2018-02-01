@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import rospy
 
 from std_msgs.msg import String
@@ -16,7 +17,7 @@ class PepperResponse(object):
 		self.orders = ["coke", "wine", "tequila", "beer", "sprite"]
 		self.greetings = ["hello", "greetings"]
 		self.accept = ["yes", "agreed", "ok", "correct"]
-		self.decline = ["no", "disagree", "not"]	
+		self.decline = ["no", "disagree", "not"]
 
 	def publish_order(self, order):
 		self.speak.publish(String("Please wait here while I get your {0}".format(order)))
@@ -30,7 +31,7 @@ class PepperResponse(object):
 			return True
 
 		if msg in self.accept:
-			self.speak.publish(String("Accepted"))	
+			self.speak.publish(String("Accepted"))
 
 		if msg in self.decline:
 			self.speak.publish(String("Declined"))

@@ -1,19 +1,18 @@
+#!/usr/bin/env python
 import rospy
 import rospkg
 
 from pocketsphinx.pocketsphinx import *
 from sphinxbase.sphinxbase import *
 
-import pyaudio
-
 import os
 import commands
-
-import pepper_response as pr
+import imp
 
 class SpeechRecognizer(object):
 
 	def __init__(self):
+		print("TEST!!!")
 		rospy.loginfo("Loading language model and vocabulary files")
 		rospack = rospkg.RosPack()
 		package_path = rospack.get_path('pepperspeech')
@@ -38,16 +37,18 @@ class SpeechRecognizer(object):
 		self.decoder.start_utt()
 		rospy.loginfo("Done starting the decoder")
 
+		rospack = rospkg.RosPack()
+		package_path = rospack.get_path('pepperspeech') + '/scripts/pepper_response.py'
+		pr = imp.load_source('PepperResponse', package_path)
 		self.response = pr.PepperResponse()
 
 	def decode(self, buffer, output=True):
 		self.decoder.process_raw(buffer, False, False)
-
 		if self.decoder.hyp() != None:
 			recognized_segments = [(seg.word) for seg in self.decoder.seg()]
 
-	    	if output:
-	    		print(recognized_segments)
+			if output:
+				print(recognized_segments)
 
 			isOrder = self.response.respond(recognized_segments[0])
 
@@ -56,7 +57,7 @@ class SpeechRecognizer(object):
 			return isOrder
 
 		else:
-        	return False
+			return False
 
 if __name__ == "__main__":
 	print("RUNNINGS SPEECH RECOGNITION SCRIPT")

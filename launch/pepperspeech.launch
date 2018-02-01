@@ -1,5 +1,7 @@
 <launch>
+  <arg name="--ip" value="--ip:=192.168.1.131" />
+  <arg name="--port" value="--port:=9559" />
 
-  <node name="pepper_speech_node" pkg="pepperspeech" type="pepper_response.py"/>
+  <node name="pepper_speech_node" pkg="pepperspeech" type="stream_audio.py" args="$(arg --ip) $(arg --port)"/>
 
 </launch>

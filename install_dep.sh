@@ -32,4 +32,12 @@ sudo make install
 
 sudo ldconfig
 
+cd ..
+
+echo "Installing Naoqi Python SDK"
+wget https://developer.softbankrobotics.com/Software/Python/2.5.5/Linux/pynaoqi-python2.7-2.5.5.5-linux64.tar.gz
+sudo tar --directory=/opt -xvf pynaoqi-python2.7-2.5.5.5-linux64.tar.gz
+echo "export PYTHONPATH=${PYTHONPATH}:/opt/pynaoqi-python2.7-2.5.5.5-linux64/lib/python2.7/site-packages" | sudo tee -a ~/.bashrc
+sudo ldconfig
+
 echo "All dependencies should now be installed"
