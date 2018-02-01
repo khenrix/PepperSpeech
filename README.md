@@ -58,7 +58,7 @@ python stream_audio.py --ip YOUR PEPPER IP ADRESS --port YOUR PEPPER PORT
     pepper_ip = "192.168.1.131" # Your pepper IP adress
     pepper_port = 9559 # Your pepper Port
     
-    # Using session instead of application as it can be initialized more then once. 
+    # Using session instead of application as it can be initialized more than once. 
     
     try:
       connection_url = "tcp://{0}:{1}".format("pepper_ip, pepper_port)
