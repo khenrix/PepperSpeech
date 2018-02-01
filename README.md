@@ -28,7 +28,7 @@ I wish you happy coding and good luck with your projects!
 <br>
 # Quick start
 ### Installation
-Run the following bash script. Take a look at the [dependencies](https://gitlab.ida.liu.se/TDDE19athome/pepperspeech/wikis/dependencies) section in the wiki if something is not working properly.
+Run the following bash script. Take a look at the [dependencies](https://github.com/khenrix/PepperSpeech/wiki/Dependencies) section in the wiki if something is not working properly.
 ```
 ./install_dep.sh
 ```
