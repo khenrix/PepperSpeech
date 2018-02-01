@@ -61,7 +61,7 @@ python stream_audio.py --ip YOUR PEPPER IP ADRESS --port YOUR PEPPER PORT
     # Using session instead of application as it can be initialized more than once. 
     
     try:
-      connection_url = "tcp://{0}:{1}".format("pepper_ip, pepper_port)
+      connection_url = "tcp://{0}:{1}".format(pepper_ip, pepper_port)
       app = qi.Session()
       app.connect(connection_url)
     except RuntimeError:
