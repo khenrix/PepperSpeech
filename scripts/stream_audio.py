@@ -20,7 +20,7 @@ class StreamAudio(object):
 
 	def __init__(self, app):
 		super(StreamAudio, self).__init__()
-		# Using session as input, if app is input uncomment this (session can be initiated more then once without causing error)
+		# Using session as input, if app is input uncomment this (session can be initiated more than once without causing error)
 		# app.start();
 		# self.session = app.session
 
