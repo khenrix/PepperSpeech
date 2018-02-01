@@ -4,7 +4,7 @@ The ROS package mainly consists of three parts (python scripts) and is ment to b
 Please take a look at the wiki for further details on installation/troubleshooting/modifications etc.   
 <br>
 <b>stream_audio.py</b> - establishes a link between peppers and the computer, then reads audio (1024 bytes).  
-<b>speech_recogntion.py</b> - takes audio and matches it to predefines sentences in the corpus using pocketsphinx.  
+<b>speech_recogntion.py</b> - takes audio and matches it to predefined sentences in the corpus using pocketsphinx.  
 <b>pepper_response</b> - decides what to do depending on what sentence is recognized.  
 <br>
 Getting everything to work together might be quite tricky and if something is not working I would recommend taking a look at the dependencies section in the wiki where I tried to gather some guides and useful pages for troubleshooting purposes.   
