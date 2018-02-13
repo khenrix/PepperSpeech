@@ -1,13 +1,13 @@
 # PepperSpeech :robot: :speech_balloon:
-PepperSpeech is a simple base for speech recognition for the pepper robot. 
-The ROS package mainly consists of three parts (python scripts) and is ment to be used as a quick start/guide for people wanting to implement speech recognition functionality in their own projects. 
+PepperSpeech is a simple speech recognition base for the pepper robot. 
+The ROS package mainly consists of three parts (python scripts) and is meant to be used as a guide to help you get started with speech recognition in your own projects.
 Please take a look at the wiki for further details on troubleshooting/modifications etc. 
 <br>  
   
 ### :grey_question: &nbsp; Current functionality
 We are trying to simulate a scenario where pepper is gathering drink orders from customers. 
 To begin with pepper streams audio and then tries to recognize what people are saying, we have some basic things which can be recognized (like beer, wine, coke, yes, no).
-If pepper recognizes a order the process stops and we publish the order to a ROS node called "pepper_speech_node" and peppers says something witty.  
+If pepper recognizes a order the process stops and we publish the order to a ROS node called "/interaction/status" and pepper says something witty.
   
 ### :file_folder: &nbsp; FILES
 <b>stream_audio.py</b> - establishes a link between pepper and the computer, then reads audio.  
